@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Psychology </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/header.css">
+    <link rel="stylesheet" href="styles/css/base.css">
+    <link rel="stylesheet" href="styles/css/main/cutaway.css">
+    <link rel="stylesheet" href="styles/css/main/consultations.css">
+    <link rel="stylesheet" href="styles/css/popup/popup.css">
+    <link rel="stylesheet" href="styles/css/popup/calendar.css">
+    <link rel="stylesheet" href="styles/css/popup/indicators.css">
+</head>
+<body class = 'wrapper'>
+    <header>
+        <div class="wrapperedcontainer">
+            <div class="navbar">
+                <div class="navbar__icon"></div>
+                <div class="navbar__list">
+                    <a class="navbar__list__item_1">О проекте</a>
+                    <a class="navbar__list__item_2">Блог</a>
+                    <a class="navbar__list__item_3">Контакты</a>
+                    <a class="navbar__list__item_4">Квалификация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cutaway">
+            <div class="container">
+                <div class="ImgGallety"></div>
+                <div class="tag-list">
+                    <button class="tag-list__item tag-list__item_active">#отношения</button>
+                    <button class="tag-list__item">#карьера</button>
+                    <button class="tag-list__item">#любовь к себе</button>
+                    <button class="tag-list__item">#переезд</button>
+                </div>
+            </div>
+        </section>
+        <section class="consultations">
+            <div class="container">
+                <h2>Провожу консультации</h2>
+                <div class="apointment">
+                    <div class="apointment__item">
+                        <h3>В Санкт-Петербурге</h3>
+                        <p>Консультация вживую</p>
+                        <a class="popup-link" href="#popup-offline">Записаться</a>
+                    </div>
+                    <div class="apointment__item">
+                        <h3>Онлайн</h3>
+                        <p>Консультация по видеосвязи</p>
+                        <a class="popup-link" href="#popup-online">Записаться</a>
+                    </div>
+                    <div class="apointment__item">
+                        <h3>По переписке</h3>
+                        <p>Консультация в любом удобном, для вас чате</p>
+                        <a class="popup-link" href="#popup-chat">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <div id="popup-online" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close"></a>
+                <div class="popup__title">Записаться на онлайн консультацию</div>
+                <div class="popup__calendar" style="grid-template-columns: repeat(3, 440px);">
+                    <div class="calendar_month" id="calendar1"></div>
+                    <div class="calendar_month" id="calendar2"></div>
+                    <div class="calendar_month" id="calendar3"></div>
+                </div>
+                <div class="popup__indicators">
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-free"></div>
+                        <div class="indicator__name">Свободно</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-booked"></div>
+                        <div class="indicator__name">Забронировано</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-occupied"></div>
+                        <div class="indicator__name">Занято</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-offline" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close"></a>
+                <div class="popup__title">Записаться на консультацию вживую</div>
+                <div class="popup__calendar" style="grid-template-columns: repeat(3, 440px);">
+                    <div class="calendar_month" id="calendar4"></div>
+                    <div class="calendar_month" id="calendar5"></div>
+                    <div class="calendar_month" id="calendar6"></div>
+                </div>
+                <div class="popup__indicators">
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-free"></div>
+                        <div class="indicator__name">Свободно</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-booked"></div>
+                        <div class="indicator__name">Забронировано</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-occupied"></div>
+                        <div class="indicator__name">Занято</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-chat" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close"></a>
+                <div class="popup__title">Записаться на консультацию по переписке</div>
+                <div class="popup__calendar" style="grid-template-columns: repeat(3, 440px);">
+                    <div class="calendar_month" id="calendar7"></div>
+                    <div class="calendar_month" id="calendar8"></div>
+                    <div class="calendar_month" id="calendar9"></div>
+                </div>
+                <div class="popup__indicators">
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-free"></div>
+                        <div class="indicator__name">Свободно</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-booked"></div>
+                        <div class="indicator__name">Забронировано</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-occupied"></div>
+                        <div class="indicator__name">Занято</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/popup.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

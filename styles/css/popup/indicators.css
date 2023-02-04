@@ -1,0 +1,31 @@
+.popup__indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.indicator-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.indicator__square {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+}
+
+.indicator-free {
+  background-color: #AA9FB5;
+}
+
+.indicator-booked {
+  background-color: #F1D9D9;
+}
+
+.indicator-occupied {
+  background-color: #F36868;
+}

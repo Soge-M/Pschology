@@ -1,0 +1,36 @@
+header {
+  padding-bottom: 105px;
+}
+header .wrapperedcontainer {
+  background-color: #F1D9D9;
+  padding: 0px 15px;
+}
+header .wrapperedcontainer .navbar {
+  max-width: 880px;
+  margin: 0 auto;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .wrapperedcontainer .navbar .navbar__icon {
+  width: 70px;
+  height: 45px;
+  background-color: #000000;
+}
+header .wrapperedcontainer .navbar .navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 410px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+}
