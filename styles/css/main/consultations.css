@@ -14,17 +14,18 @@
   background-color: #FFFFFF;
   min-height: 140px;
   width: 280px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 .consultations .apointment .apointment__item h3 {
   font-size: 24px;
-  padding: 10px 0px 15px 20px;
+  padding-bottom: 15px;
   font-weight: 500;
 }
 .consultations .apointment .apointment__item p {
-  padding: 0px 0px 15px 20px;
+  padding-bottom: 15px;
 }
 .consultations .apointment .apointment__item a {
   color: #F36868;
-  padding-left: 20px;
   text-decoration: none;
 }
