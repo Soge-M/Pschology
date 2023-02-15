@@ -30,11 +30,16 @@
     </header>
     <main>
         <section class="cutaway">
-            <div class="container">
-                <div class="ImgGallety"></div>
+            <div class="container_spec">
+                <div class="ImgGallety" style="grid-template-columns: repeat(4, 880px) calc(100% - 880px - 18px)">
+                    <div class="ImgGallety__inner" >#отношения</div>
+                    <div class="ImgGallety__inner" >#карьера</div>
+                    <div class="ImgGallety__inner">#любовь к себе</div>
+                    <div class="ImgGallety__inner">#переезд</div>
+                </div>
                 <div class="tag-list">
-                    <button class="tag-list__item tag-list__item_active">#отношения</button>
-                    <button class="tag-list__item">#карьера</button>
+                    <button href="#relationship" class="tag-list__item tag-list__item_active">#отношения</button>
+                    <button href="#carier" class="tag-list__item">#карьера</button>
                     <button class="tag-list__item">#любовь к себе</button>
                     <button class="tag-list__item">#переезд</button>
                 </div>
@@ -148,5 +153,6 @@
     </div>
     <script src="js/popup.js"></script>
     <script src="js/calendar.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

@@ -1,11 +1,27 @@
 .cutaway {
   padding-bottom: 105px;
 }
+.cutaway .container_spec {
+  margin-left: calc((100% - 880px) / 2);
+}
 .cutaway .ImgGallety {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 18px;
+  overflow-y: visible;
+  overflow-x: auto;
+  width: 100%;
+  -ms-overflow-style: none;
+}
+.cutaway .ImgGallety::-webkit-scrollbar {
+  display: none;
+}
+.cutaway .ImgGallety__inner {
   border-radius: 20px;
   background-color: #FFFFFF;
   height: 330px;
   margin-bottom: 18px;
+  padding: 24px 20px;
 }
 .cutaway .tag-list__item {
   font-size: 24px;
