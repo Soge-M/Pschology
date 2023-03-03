@@ -13,7 +13,6 @@
 }
 
 .calendar_month {
-  width: 440px;
   padding-bottom: 36px;
 }
 
@@ -40,6 +39,7 @@
   width: 56px;
   background-color: #F1F5F9;
   border-radius: 12px;
+  position: relative;
 }
 
 .square_empty {
@@ -47,17 +47,17 @@
 }
 
 .square__number {
-  position: relative;
-  right: -32px;
-  bottom: -35px;
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
   width: 15px;
   text-align: right;
 }
 
 .square__indicator-1 {
-  position: relative;
-  right: -5px;
-  top: -10px;
+  position: absolute;
+  left: 7px;
+  top: 5px;
   height: 12px;
   width: 12px;
   background-color: #AA9FB5;
@@ -65,11 +65,46 @@
 }
 
 .square__indicator-2 {
-  position: relative;
-  right: -5px;
-  top: -16px;
+  position: absolute;
+  left: 7px;
+  top: 12px;
   height: 12px;
   width: 12px;
   background-color: #D9E3F1;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 560px) {
+  .popup__calendar {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 24px;
+    overflow-x: auto;
+    overflow-y: visible;
+    width: 100%;
+    -ms-overflow-style: none;
+  }
+  .month__name {
+    font-size: 22px;
+    font-weight: 300;
+    padding-bottom: 12px;
+  }
+  .calendar_month {
+    padding-bottom: 24px;
+  }
+  .square {
+    height: 50px;
+    width: 50px;
+    background-color: #F1F5F9;
+    border-radius: 12px;
+    position: relative;
+  }
+  .square__number {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 15px;
+    text-align: right;
+    font-size: 14px;
+  }
 }

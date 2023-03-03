@@ -1,7 +1,11 @@
 .popup__indicators {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 12px auto 12px auto;
+  grid-template-columns: repeat(3, auto);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   gap: 12px;
 }
 
@@ -28,4 +32,28 @@
 
 .indicator-occupied {
   background-color: #4E8698;
+}
+
+@media screen and (max-width: 560px) {
+  .popup__indicators {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 12px auto;
+    grid-template-columns: repeat(2, auto);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 12px;
+  }
+  .indicator-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8pxpx;
+  }
+  .indicator__square {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
 }

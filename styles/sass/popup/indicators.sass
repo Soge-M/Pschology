@@ -1,10 +1,12 @@
 @use "../colors"
 .popup__indicators
-    display: flex
-    gap:12px
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    justify-content: start
+    gap: 12px
 .indicator-box
     display: flex
-    gap:12px
+    gap: 12px
 .indicator__square
     width: 24px
     height: 24px
@@ -15,4 +17,16 @@
     background-color: colors.$brandPastel
 .indicator-occupied
     background-color: colors.$brandContrast
-
+@media screen and ( max-width: 560px  )
+    .popup__indicators
+        display: grid
+        grid-template-columns: repeat(2, auto)
+        justify-content: start
+        gap: 12px
+    .indicator-box
+        display: flex
+        gap: 8pxpx
+    .indicator__square
+        width: 20px
+        height: 20px
+        border-radius: 5px
