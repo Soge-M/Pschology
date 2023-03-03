@@ -26,7 +26,14 @@ const tagListItems = document.querySelectorAll('.tag-list__item');
 
 tagListItems.forEach((el,i) => {
     tagListItems[i].addEventListener('click',function(){
-        scrollBox.scroll((ImgGalletyInnerWidth+18)*(i),0);
+        scrollBox.scroll({
+            left:(ImgGalletyInnerWidth+18)*(i),
+            top: 0,
+            behavior: 'smooth',
+        });
     });
     
 });
+
+
+

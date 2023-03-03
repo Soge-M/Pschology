@@ -1,6 +1,6 @@
 .consultations h2 {
   font-size: 40px;
-  padding-bottom: 18px;
+  padding-bottom: 24px;
   font-weight: 500;
 }
 .consultations .apointment {
@@ -13,21 +13,125 @@
   border-radius: 20px;
   background-color: #FFFFFF;
   min-height: 140px;
+  heigth: auto;
   width: 280px;
   padding: 16px 18px;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .consultations .apointment .apointment__item h3 {
   font-size: 24px;
-  padding-bottom: 15px;
   font-weight: 500;
 }
-.consultations .apointment .apointment__item p {
-  padding-bottom: 32px;
-}
 .consultations .apointment .apointment__item a {
-  color: #F36868;
+  color: #4E8698;
   text-decoration: none;
-  position: absolute;
-  bottom: 16px;
+}
+
+@media (max-width: 980px) {
+  .consultations h2 {
+    font-size: 32px;
+    padding-bottom: 24px;
+    font-weight: 500;
+  }
+  .consultations .apointment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+  }
+  .consultations .apointment__item {
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    min-height: 140px;
+    heigth: auto;
+    max-width: 292px;
+    padding: 16px 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .consultations .apointment__item h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+  }
+  .consultations .apointment__item p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+  }
+  .consultations .apointment__item a {
+    font-size: 16px;
+    color: #4E8698;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+  }
+}
+@media (max-width: 560px) {
+  .consultations {
+    margin-left: calc((100% - 340px - 15px) / 2);
+  }
+  .consultations h2 {
+    font-size: 24px;
+    padding-bottom: 24px;
+    font-weight: 500;
+  }
+  .consultations .apointment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+  .consultations .apointment__item {
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    min-height: 115px;
+    heigth: auto;
+    max-width: 340px;
+    padding: 16px 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .consultations .apointment__item h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+  }
+  .consultations .apointment__item p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+  }
+  .consultations .apointment__item a {
+    font-size: 16px;
+    color: #4E8698;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+  }
 }

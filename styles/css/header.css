@@ -2,10 +2,11 @@ header {
   padding-bottom: 105px;
 }
 header .wrapperedcontainer {
-  background-color: #F1D9D9;
-  padding: 0px 15px;
+  background-color: #D9E3F1;
+  padding: 0px 40px;
 }
 header .wrapperedcontainer .navbar {
+  width: auto;
   max-width: 880px;
   margin: 0 auto;
   height: 85px;
@@ -24,13 +25,17 @@ header .wrapperedcontainer .navbar .navbar__icon {
   height: 45px;
   background-color: #000000;
 }
-header .wrapperedcontainer .navbar .navbar__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 410px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header .wrapperedcontainer .navbar .navbar__number {
   font-size: 18px;
+}
+
+@media (max-width: 980px) {
+  header {
+    padding-bottom: 85px;
+  }
+}
+@media (max-width: 560px) {
+  header {
+    padding-bottom: 65px;
+  }
 }

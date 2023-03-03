@@ -3,11 +3,11 @@ header
     padding-bottom: 105px
     .wrapperedcontainer
         background-color: colors.$brandPastel
-        padding: 0px 15px
+        padding: 0px 40px
         .navbar
-            width:auto
+            width: auto
             max-width: 880px
-            margin:0 auto
+            margin: 0 auto
             height: 85px
             display: flex
             justify-content: space-between
@@ -16,8 +16,11 @@ header
                 width: 70px
                 height: 45px
                 background-color: colors.$bgDark
-            .navbar__list
-                display: flex
-                width: 410px
-                justify-content: space-between
+            .navbar__number
                 font-size: 18px
+@media ( max-width: 980px  )
+    header
+        padding-bottom: 85px
+@media ( max-width: 560px  )
+    header
+        padding-bottom: 65px

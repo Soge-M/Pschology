@@ -2,28 +2,90 @@
 .consultations
     h2
         font-size: 40px
-        padding-bottom:18px
+        padding-bottom: 24px
         font-weight: 500
     .apointment
         display: flex
         gap: 18px
         .apointment__item
-            border-radius:20px
+            border-radius: 20px
             background-color: colors.$bgSecondary
             min-height: 140px
-            heigth:auto
+            heigth: auto
             width: 280px
             padding: 16px 18px
-            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-between
             h3
                 font-size: 24px
-                padding-bottom: 15px
                 font-weight: 500
-            p
-                padding-bottom: 32px
             a
                 color: colors.$brandContrast
                 text-decoration: none
-                position: absolute
-                bottom: 16px
+@media ( max-width: 980px  )
+    .consultations
+        h2
+            font-size: 32px
+            padding-bottom: 24px
+            font-weight: 500
+        .apointment
+            display: flex
+            gap: 12px
+        .apointment__item
+            border-radius: 20px
+            background-color: colors.$bgSecondary
+            min-height: 140px
+            heigth: auto
+            max-width: 292px
+            padding: 16px 18px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
 
+            h3
+                font-size: 18px
+                font-weight: 500
+                font-family: "Roboto", sans-serif
+            p
+                font-size: 16px
+                font-family: "Roboto", sans-serif
+            a
+                font-size: 16px
+                color: colors.$brandContrast
+                text-decoration: none
+                font-family: "Roboto", sans-serif
+@media ( max-width: 560px  )
+    .consultations
+        margin-left: calc((100% - 340px - 15px) / 2)
+        h2
+            font-size: 24px
+            padding-bottom: 24px
+            font-weight: 500
+        .apointment
+            display: flex
+            flex-direction: column
+            gap: 12px
+        .apointment__item
+            border-radius: 20px
+            background-color: colors.$bgSecondary
+            min-height: 115px
+            heigth: auto
+            max-width: 340px
+            padding: 16px 18px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            h3
+                font-size: 18px
+                font-weight: 500
+                font-family: "Roboto", sans-serif
+            p
+                font-size: 16px
+                font-family: "Roboto", sans-serif
+            a
+                font-size: 16px
+                color: colors.$brandContrast
+                text-decoration: none
+                font-family: "Roboto", sans-serif

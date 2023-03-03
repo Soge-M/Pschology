@@ -4,18 +4,29 @@
     margin: 0
     padding: 0
 .container
-    width:auto
+    width: auto
     max-width: 880px
-    margin:0 auto
-    padding: 0px 15px
+    margin: 0 auto
 body
     background-color: colors.$bgPrimary
     font-size: 16px
     font-family: 'Roboto', sans-serif
-body.lock 
+body.lock
     overflow: hidden
 main
     padding-bottom: 105px
 footer
-    background-color: colors.$bgDark 
+    background-color: colors.$bgDark
     height: 170px
+@media ( max-width: 980px  )
+    .container
+        max-width: none
+        padding: 0px 40px
+    main
+        padding-bottom: 85px
+@media ( max-width: 560px  )
+    .container
+        max-width: none
+        padding: 0px 16px
+    main
+        padding-bottom: 65px
