@@ -1,38 +1,25 @@
-const bodyl = document.querySelector('body');
-const scrollBox = document.querySelector('.ImgGallety');
-const ImgGalletyInnerWidth = document.querySelector('.ImgGallety__inner').offsetWidth;
-
-scrollBox.addEventListener( 'scroll', function(){
-    let scrollDistance = scrollBox.scrollLeft;
-    
-    console.log(scrollDistance);
-
-    document.querySelectorAll('.ImgGallety__inner').forEach((el,i) =>  {
-        if ((el.offsetLeft - (bodyl.offsetWidth - ImgGalletyInnerWidth)-18) <= scrollDistance){
-            console.log(el.offsetLeft);
-            document.querySelectorAll('.tag-list__item').forEach((el) => {
-                if (el.classList.contains('tag-list__item_active')) {
-                    el.classList.remove('tag-list__item_active');
-                }
-            });
-
-            document.querySelectorAll('.tag-list__item')[i].classList.add('tag-list__item_active');
-        }
+const bodyt = document.querySelector('body');
+$(function(){
+    $('.ImgGallety').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        arrows : false,
+        asNavFor: '.tag-list',
     });
-});
-
-
-const tagListItems = document.querySelectorAll('.tag-list__item');
-
-tagListItems.forEach((el,i) => {
-    tagListItems[i].addEventListener('click',function(){
-        scrollBox.scroll({
-            left:(ImgGalletyInnerWidth+18)*(i),
-            top: 0,
-            behavior: 'smooth',
+    $('.tag-list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        asNavFor: '.ImgGallety',
+        dots: false,
+        focusOnSelect: true,
+        variableWidth: true,
+        infinite: false,
         });
-    });
-    
+    if(bodyt.offsetWidth <= 560){
+    }
 });
 
 
