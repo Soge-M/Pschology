@@ -4,10 +4,11 @@
   font-weight: 500;
 }
 .consultations .apointment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 18px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 18px 1fr 18px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px;
 }
 .consultations .apointment .apointment__item {
   border-radius: 20px;
@@ -29,6 +30,10 @@
 .consultations .apointment .apointment__item h3 {
   font-size: 24px;
   font-weight: 500;
+  margin-bottom: 8px;
+}
+.consultations .apointment .apointment__item p {
+  margin-bottom: 8px;
 }
 .consultations .apointment .apointment__item a {
   color: #4E8698;
@@ -38,14 +43,9 @@
 @media screen and (max-width: 980px) {
   .consultations h2 {
     font-size: 32px;
-    padding-bottom: 24px;
-    font-weight: 500;
   }
   .consultations .apointment {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 12px;
+    grid-gap: 12px;
   }
   .consultations .apointment h3 {
     font-size: 18px;
@@ -81,6 +81,5 @@
   }
   .consultations .apointment .apointment__item {
     max-width: none;
-    width: 100%;
   }
 }

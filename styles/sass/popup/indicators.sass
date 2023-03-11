@@ -1,8 +1,7 @@
 @use "../colors"
 .popup__indicators
-    display: grid
-    grid-template-columns: repeat(3, auto)
-    justify-content: start
+    display: flex
+    flex-wrap: wrap
     gap: 12px
 .indicator-box
     display: flex
@@ -19,9 +18,8 @@
     background-color: colors.$brandContrast
 @media screen and ( max-width: 560px  )
     .popup__indicators
-        display: grid
-        grid-template-columns: repeat(2, auto)
-        justify-content: start
+        display: flex
+        flex-wrap: wrap
         gap: 12px
     .indicator-box
         display: flex

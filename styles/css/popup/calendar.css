@@ -26,12 +26,15 @@
   font-size: 16px;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  padding-bottom: 8px;
+.month__numbers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 6px auto 6px auto 6px auto 6px auto 6px auto 6px auto;
+  grid-template-columns: repeat(7, auto);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 6px;
 }
 
 .square {
@@ -40,6 +43,7 @@
   background-color: #F1F5F9;
   border-radius: 12px;
   position: relative;
+  text-decoration: none;
 }
 
 .square_empty {
@@ -52,6 +56,7 @@
   bottom: 5px;
   width: 15px;
   text-align: right;
+  color: black;
 }
 
 .square__indicator-1 {
@@ -83,6 +88,7 @@
     overflow-y: visible;
     width: 100%;
     -ms-overflow-style: none;
+    cursor: auto;
   }
   .month__name {
     font-size: 22px;

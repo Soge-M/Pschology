@@ -5,7 +5,7 @@ header .wrapperedcontainer {
   background-color: #D9E3F1;
   padding: 0px 40px;
 }
-header .wrapperedcontainer .navbar {
+header .navbar {
   width: auto;
   max-width: 880px;
   margin: 0 auto;
@@ -20,12 +20,12 @@ header .wrapperedcontainer .navbar {
       -ms-flex-align: center;
           align-items: center;
 }
-header .wrapperedcontainer .navbar .navbar__icon {
+header .navbar__icon {
   width: 70px;
   height: 45px;
   background-color: #000000;
 }
-header .wrapperedcontainer .navbar .navbar__number {
+header .navbar__number {
   font-size: 18px;
 }
 
@@ -33,9 +33,15 @@ header .wrapperedcontainer .navbar .navbar__number {
   header {
     padding-bottom: 85px;
   }
+  header .navbar__number {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 560px) {
   header {
     padding-bottom: 65px;
+  }
+  header .navbar__number {
+    font-size: 14px;
   }
 }

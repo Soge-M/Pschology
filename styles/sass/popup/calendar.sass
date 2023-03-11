@@ -16,16 +16,18 @@
     padding-bottom: 12px
 .month__number
     font-size: 16px
-.row
-    display: flex
-    gap: 8px
-    padding-bottom: 8px
+.month__numbers
+    display: grid
+    grid-template-columns: repeat(7, auto)
+    justify-content: start
+    gap: 6px
 .square
     height: 56px
     width: 56px
     background-color: colors.$bgPrimary
     border-radius: 12px
     position: relative
+    text-decoration: none
 .square_empty
     visibility: hidden
 .square__number
@@ -34,6 +36,7 @@
     bottom: 5px
     width: 15px
     text-align: right
+    color: black
 .square__indicator-1
     position: absolute
     left: 7px
@@ -58,6 +61,7 @@
         overflow-y: visible
         width: 100%
         -ms-overflow-style: none
+        cursor: auto
     .month__name
         font-size: 22px
         font-weight: 300

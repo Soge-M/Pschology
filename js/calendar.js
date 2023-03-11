@@ -21,11 +21,11 @@ function renderMonth(month, monthCounter){
     monthBox.appendChild(monthNumbers);
     document.getElementById(`calendar${monthCounter}`).appendChild(monthBox);
     const rows = [];
-    for ( let i = 0; i < qtyRows(lastDayMonth, lastDayWeek, firstDayWeek);i++ ){
-        rows[i] = document.createElement('div');
-        rows[i].className = 'row row_' + (i+1);
-        monthNumbers.appendChild(rows[i]);
-    }
+    // for ( let i = 0; i < qtyRows(lastDayMonth, lastDayWeek, firstDayWeek);i++ ){
+    //     rows[i] = document.createElement('div');
+    //     rows[i].className = 'row row_' + (i+1);
+    //     monthNumbers.appendChild(rows[i]);
+    // }
     let counterNumbers = 0;
     let emptySquaresController = true;
     for (let i = 0; i <qtyRows(lastDayMonth, lastDayWeek, firstDayWeek);i++){
@@ -34,16 +34,17 @@ function renderMonth(month, monthCounter){
                 for (let k=0 ;k < firstDayWeek - 1 ; k++){
                     emptySquares[k] = document.createElement('div');
                     emptySquares[k].className = 'square square_empty';
-                    rows[0].appendChild(emptySquares[k]);
+                    monthNumbers.appendChild(emptySquares[k]);
                 }   
                 j = firstDayWeek - 1;
                 emptySquaresController = false;
             }
             if (counterNumbers > lastDayMonth - 1 ) break;
-            numberSquares[counterNumbers] = document.createElement('div');
+            numberSquares[counterNumbers] = document.createElement('a');
             numberSquares[counterNumbers].className = `square square_filled`;
+            numberSquares[counterNumbers].setAttribute('href','#popupRec')
             numberSquares[counterNumbers].innerHTML = `<div class='square__number square__number-${counterNumbers+1}'>${counterNumbers+1}</div> \n <div class='square__indicator-1'></div>\n <div class='square__indicator-2'></div>`
-            rows[i].appendChild(numberSquares[counterNumbers]);
+            monthNumbers.appendChild(numberSquares[counterNumbers]);
             counterNumbers++;
         }
     }

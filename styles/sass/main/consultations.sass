@@ -5,8 +5,9 @@
         padding-bottom: 24px
         font-weight: 500
     .apointment
-        display: flex
-        gap: 18px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 18px
         .apointment__item
             border-radius: 20px
             background-color: colors.$bgSecondary
@@ -19,6 +20,9 @@
             h3
                 font-size: 24px
                 font-weight: 500
+                margin-bottom: 8px
+            p
+                margin-bottom: 8px
             a
                 color: colors.$brandContrast
                 text-decoration: none
@@ -26,11 +30,8 @@
     .consultations
         h2
             font-size: 32px
-            padding-bottom: 24px
-            font-weight: 500
         .apointment
-            display: flex
-            gap: 12px
+            grid-gap: 12px
             h3
                 font-size: 18px
                 font-weight: 500
@@ -55,4 +56,3 @@
             gap: 12px
             .apointment__item
                 max-width: none
-                width: 100%

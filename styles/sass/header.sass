@@ -4,23 +4,27 @@ header
     .wrapperedcontainer
         background-color: colors.$brandPastel
         padding: 0px 40px
-        .navbar
-            width: auto
-            max-width: 880px
-            margin: 0 auto
-            height: 85px
-            display: flex
-            justify-content: space-between
-            align-items: center
-            .navbar__icon
-                width: 70px
-                height: 45px
-                background-color: colors.$bgDark
-            .navbar__number
-                font-size: 18px
+    .navbar
+        width: auto
+        max-width: 880px
+        margin: 0 auto
+        height: 85px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .navbar__icon
+        width: 70px
+        height: 45px
+        background-color: colors.$bgDark
+    .navbar__number
+        font-size: 18px
 @media screen and ( max-width: 980px  )
     header
         padding-bottom: 85px
+        .navbar__number
+            font-size: 16px
 @media screen and ( max-width: 560px  )
     header
         padding-bottom: 65px
+        .navbar__number
+            font-size: 14px
