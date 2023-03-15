@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/css/popup/popup.css">
     <link rel="stylesheet" href="styles/css/popup/calendar.css">
     <link rel="stylesheet" href="styles/css/popup/indicators.css">
+    <link rel="stylesheet" href="styles/css/popup/rec.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="libs/slick/slick-theme.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
@@ -149,12 +150,32 @@
             </div>
         </div>
     </div>
+    <div id="popupRec" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close"></a>
+                <h2 class="rec-header">Запись на консультацию</h2>
+                <div class="input-box">
+                    <input type="text" size="40" placeholder="Имя" class="input-name">
+                    <input type="text" size="40" placeholder="Фамилия" class="input-surname">
+                    <input type="text" size="40" placeholder="Отчество" class="input-patronymic">
+                </div>
+                <div class="time-box">
+                    <button class="butt-time butt-time_active">Утро: 10 - 11</button>
+                    <button class="butt-time">День: 13 - 14</button>
+                    <button class="butt-time">Вечер: 18 - 19</button>
+                </div>
+                <button class="rec-button close-popup">Записаться</button>
+            </div>
+        </div>
+    </div>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
-    <script src="js/popup.js"></script>
     <script src="js/calendar.js"></script>
+    <script src="js/popup.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/scrollcal.js"></script>
+    <script src="js/rec.js"></script>
 </body>
 </html>

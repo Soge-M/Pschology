@@ -2,7 +2,7 @@ const monthes = ['Январь','Февраль','Март','Апрель','Ма
 const month1 = new Date();
 const month2 = new Date(month1.getFullYear(),month1.getMonth()+1);
 const month3 = new Date(month1.getFullYear(),month1.getMonth()+2);
-const emptySquares=[];
+let emptySquares=[];
 const numberSquares=[];
 
 
@@ -20,14 +20,9 @@ function renderMonth(month, monthCounter){
     monthNumbers.className = 'month__numbers';
     monthBox.appendChild(monthNumbers);
     document.getElementById(`calendar${monthCounter}`).appendChild(monthBox);
-    const rows = [];
-    // for ( let i = 0; i < qtyRows(lastDayMonth, lastDayWeek, firstDayWeek);i++ ){
-    //     rows[i] = document.createElement('div');
-    //     rows[i].className = 'row row_' + (i+1);
-    //     monthNumbers.appendChild(rows[i]);
-    // }
     let counterNumbers = 0;
     let emptySquaresController = true;
+    numberSquares[monthCounter-1] = [];
     for (let i = 0; i <qtyRows(lastDayMonth, lastDayWeek, firstDayWeek);i++){
         for (let j = 0; j < 7; j++){
             if (emptySquaresController == true){
@@ -40,11 +35,14 @@ function renderMonth(month, monthCounter){
                 emptySquaresController = false;
             }
             if (counterNumbers > lastDayMonth - 1 ) break;
-            numberSquares[counterNumbers] = document.createElement('a');
-            numberSquares[counterNumbers].className = `square square_filled`;
-            numberSquares[counterNumbers].setAttribute('href','#popupRec')
-            numberSquares[counterNumbers].innerHTML = `<div class='square__number square__number-${counterNumbers+1}'>${counterNumbers+1}</div> \n <div class='square__indicator-1'></div>\n <div class='square__indicator-2'></div>`
-            monthNumbers.appendChild(numberSquares[counterNumbers]);
+            numberSquares[monthCounter-1][counterNumbers] = document.createElement('a');
+            numberSquares[monthCounter-1][counterNumbers].className = `square square_filled popup-link`;
+            numberSquares[monthCounter-1][counterNumbers].setAttribute('href','#popupRec')
+            numberSquares[monthCounter-1][counterNumbers].innerHTML = `<div class='square__number square__number-${counterNumbers+1}'>${counterNumbers+1}</div> \n <div class='square__indicator-1'></div>\n <div class='square__indicator-2'></div>`
+            monthNumbers.appendChild(numberSquares[monthCounter-1][counterNumbers]);
+            numberSquares[monthCounter-1][counterNumbers].addEventListener('click', function (e) {
+                console.log(e);
+            });
             counterNumbers++;
         }
     }
@@ -75,6 +73,7 @@ renderMonth(month3,6);
 renderMonth(month1,7);
 renderMonth(month2,8);
 renderMonth(month3,9);
+console.log(numberSquares[0][0])
 
 
 
