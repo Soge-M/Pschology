@@ -23,10 +23,9 @@
     display: flex
     justify-content: center
     align-items: center
-    padding: 90px 30px
 .popup__content
     width: 864px
-    height: 563px
+    height: auto
     background-color: colors.$bgSecondary
     padding: 36px 0 36px 48px
     border-radius: 20px
@@ -65,10 +64,9 @@
         display: flex
         justify-content: center
         align-items: center
-        padding: 90px 30px
     .popup__content
-        width: calc(100% + 60px)
-        height: 600px
+        width: 100%
+        height: auto
         background-color: colors.$bgSecondary
         padding: 40px 0px 48px 36px
         border-radius: 20px 20px 0 0
@@ -76,7 +74,7 @@
         opacity: 0
         transform: translate(0px, 100%)
     .popup.open .popup__content
-        transform: translate(0px, calc(50vh - 300px))
+        transform: translate(0px, calc(50vh - 50%))
         opacity: 1
     .popup__title
         font-size: 28px

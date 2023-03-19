@@ -74,7 +74,7 @@
             <div class="popup__content">
                 <a href="" class="popup__close"></a>
                 <div class="popup__title">Записаться на онлайн консультацию</div>
-                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, 440px);">
+                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);" >
                     <div class="calendar_month" id="calendar1"></div>
                     <div class="calendar_month" id="calendar2"></div>
                     <div class="calendar_month" id="calendar3"></div>
@@ -101,7 +101,7 @@
             <div class="popup__content">
                 <a href="" class="popup__close"></a>
                 <div class="popup__title">Записаться на консультацию вживую</div>
-                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, 440px);">
+                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);" >
                     <div class="calendar_month" id="calendar4"></div>
                     <div class="calendar_month" id="calendar5"></div>
                     <div class="calendar_month" id="calendar6"></div>
@@ -128,7 +128,7 @@
             <div class="popup__content">
                 <a href="" class="popup__close"></a>
                 <div class="popup__title">Записаться на консультацию по переписке</div>
-                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, 440px);">
+                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);">
                     <div class="calendar_month" id="calendar7"></div>
                     <div class="calendar_month" id="calendar8"></div>
                     <div class="calendar_month" id="calendar9"></div>
@@ -152,7 +152,7 @@
     </div>
     <div id="popupRec" class="popup">
         <div class="popup__body">
-            <div class="popup__content">
+            <div id="popupRec__content" class="popup__content">
                 <a href="" class="popup__close"></a>
                 <h2 class="rec-header">Запись на консультацию</h2>
                 <div class="input-box">
@@ -161,9 +161,9 @@
                     <input type="text" size="40" placeholder="Отчество" class="input-patronymic">
                 </div>
                 <div class="time-box">
-                    <button class="butt-time butt-time_active">Утро: 10 - 11</button>
-                    <button class="butt-time">День: 13 - 14</button>
-                    <button class="butt-time">Вечер: 18 - 19</button>
+                    <button class="butt-time butt-time_morning butt-time_active">Утро: 10 - 11</button>
+                    <button class="butt-time butt-time_day">День: 13 - 14</button>
+                    <button class="butt-time butt-time_evening">Вечер: 18 - 19</button>
                 </div>
                 <button class="rec-button close-popup">Записаться</button>
             </div>
@@ -177,5 +177,6 @@
     <script src="js/slider.js"></script>
     <script src="js/scrollcal.js"></script>
     <script src="js/rec.js"></script>
+    <script src="js/t-bNameChange.js"></script>
 </body>
 </html>

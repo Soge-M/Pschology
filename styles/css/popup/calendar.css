@@ -1,6 +1,9 @@
 .popup__calendar {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   grid-gap: 36px;
   overflow-x: auto;
   overflow-y: visible;
@@ -83,7 +86,7 @@
   .popup__calendar {
     display: -ms-grid;
     display: grid;
-    grid-gap: 24px;
+    grid-gap: 22px;
     overflow-x: auto;
     overflow-y: visible;
     width: 100%;
