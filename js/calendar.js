@@ -4,6 +4,8 @@ const month2 = new Date(month1.getFullYear(),month1.getMonth()+1);
 const month3 = new Date(month1.getFullYear(),month1.getMonth()+2);
 let emptySquares=[];
 const numberSquares=[];
+let date,dayCalendar,monthCalendar, yearCalendar;
+let recWay;
 
 
 function renderMonth(month, monthCounter){
@@ -37,11 +39,25 @@ function renderMonth(month, monthCounter){
             if (counterNumbers > lastDayMonth - 1 ) break;
             numberSquares[monthCounter-1][counterNumbers] = document.createElement('a');
             numberSquares[monthCounter-1][counterNumbers].className = `square square_filled popup-link`;
-            numberSquares[monthCounter-1][counterNumbers].setAttribute('href','#popupRec')
-            numberSquares[monthCounter-1][counterNumbers].innerHTML = `<div class='square__number square__number-${counterNumbers+1}'>${counterNumbers+1}</div> \n <div class='square__indicator-1'></div>\n <div class='square__indicator-2'></div>`
+            numberSquares[monthCounter-1][counterNumbers].setAttribute('draggable','false');
+            if (monthCounter < 4){
+                numberSquares[monthCounter-1][counterNumbers].setAttribute('href','#popupRec1');
+            } else if (monthCounter >= 4 && monthCounter <= 6){
+                numberSquares[monthCounter-1][counterNumbers].setAttribute('href','#popupRec2');
+            } else {
+                numberSquares[monthCounter-1][counterNumbers].setAttribute('href','#popupRec3');
+            };
+            numberSquares[monthCounter-1][counterNumbers].setAttribute('id',`${counterNumbers+1}-${month.getMonth()+1}-${month.getFullYear()}`)
+            numberSquares[monthCounter-1][counterNumbers].innerHTML = `<div class='square__number'>${counterNumbers+1}</div> \n <div class='square__indicator-1'></div>\n <div class='square__indicator-2'></div>`
             monthNumbers.appendChild(numberSquares[monthCounter-1][counterNumbers]);
             numberSquares[monthCounter-1][counterNumbers].addEventListener('click', function (e) {
-                console.log(e);
+                date = e.target.id.split('-');
+                [dayCalendar,monthCalendar, yearCalendar] = date;
+                console.log(dayCalendar);
+                console.log(monthCalendar);
+                console.log(yearCalendar);
+                recWay = Math.floor((monthCounter-1)/3)+1;
+                console.log(recWay);
             });
             counterNumbers++;
         }

@@ -73,34 +73,7 @@
         <div class="popup__body">
             <div class="popup__content">
                 <a href="" class="popup__close"></a>
-                <div class="popup__title">Записаться на онлайн консультацию</div>
-                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);" >
-                    <div class="calendar_month" id="calendar1"></div>
-                    <div class="calendar_month" id="calendar2"></div>
-                    <div class="calendar_month" id="calendar3"></div>
-                </div>
-                <div class="popup__indicators">
-                    <div class="indicator-box">
-                        <div class="indicator__square indicator-free"></div>
-                        <div class="indicator__name">Свободно</div>
-                    </div>
-                    <div class="indicator-box">
-                        <div class="indicator__square indicator-booked"></div>
-                        <div class="indicator__name">Забронировано</div>
-                    </div>
-                    <div class="indicator-box">
-                        <div class="indicator__square indicator-occupied"></div>
-                        <div class="indicator__name">Занято</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="popup-offline" class="popup">
-        <div class="popup__body">
-            <div class="popup__content">
-                <a href="" class="popup__close"></a>
-                <div class="popup__title">Записаться на консультацию вживую</div>
+                <div class="popup__title">Онлайн консультация</div>
                 <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);" >
                     <div class="calendar_month" id="calendar4"></div>
                     <div class="calendar_month" id="calendar5"></div>
@@ -123,11 +96,38 @@
             </div>
         </div>
     </div>
+    <div id="popup-offline" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close"></a>
+                <div class="popup__title">Консультация вживую</div>
+                <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);" >
+                    <div class="calendar_month" id="calendar1"></div>
+                    <div class="calendar_month" id="calendar2"></div>
+                    <div class="calendar_month" id="calendar3"></div>
+                </div>
+                <div class="popup__indicators">
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-free"></div>
+                        <div class="indicator__name">Свободно</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-booked"></div>
+                        <div class="indicator__name">Забронировано</div>
+                    </div>
+                    <div class="indicator-box">
+                        <div class="indicator__square indicator-occupied"></div>
+                        <div class="indicator__name">Занято</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="popup-chat" class="popup">
         <div class="popup__body">
             <div class="popup__content">
                 <a href="" class="popup__close"></a>
-                <div class="popup__title">Записаться на консультацию по переписке</div>
+                <div class="popup__title">Консультация по переписке</div>
                 <div class="popup__calendar cursorgrab" style="grid-template-columns: repeat(3, auto);">
                     <div class="calendar_month" id="calendar7"></div>
                     <div class="calendar_month" id="calendar8"></div>
@@ -150,11 +150,49 @@
             </div>
         </div>
     </div>
-    <div id="popupRec" class="popup">
+    <div id="popupRec1" class="popup">
         <div class="popup__body">
             <div id="popupRec__content" class="popup__content">
                 <a href="" class="popup__close"></a>
-                <h2 class="rec-header">Запись на консультацию</h2>
+                <h2 class="rec-header">Консультация вживую</h2>
+                <div class="input-box">
+                    <input type="text" size="40" placeholder="Имя" class="input-name">
+                    <input type="text" size="40" placeholder="Фамилия" class="input-surname">
+                    <input type="text" size="40" placeholder="Отчество" class="input-patronymic">
+                </div>
+                <div class="time-box">
+                    <button class="butt-time butt-time_morning butt-time_active">Утро: 10 - 11</button>
+                    <button class="butt-time butt-time_day">День: 13 - 14</button>
+                    <button class="butt-time butt-time_evening">Вечер: 18 - 19</button>
+                </div>
+                <button class="rec-button close-popup">Записаться</button>
+            </div>
+        </div>
+    </div>
+    <div id="popupRec2" class="popup">
+        <div class="popup__body">
+            <div id="popupRec__content" class="popup__content">
+                <a href="" class="popup__close"></a>
+                <h2 class="rec-header">Онлайн консультация</h2>
+                <div class="input-box">
+                    <input type="text" size="40" placeholder="Имя" class="input-name">
+                    <input type="text" size="40" placeholder="Фамилия" class="input-surname">
+                    <input type="text" size="40" placeholder="Отчество" class="input-patronymic">
+                </div>
+                <div class="time-box">
+                    <button class="butt-time butt-time_morning butt-time_active">Утро: 10 - 11</button>
+                    <button class="butt-time butt-time_day">День: 13 - 14</button>
+                    <button class="butt-time butt-time_evening">Вечер: 18 - 19</button>
+                </div>
+                <button class="rec-button close-popup">Записаться</button>
+            </div>
+        </div>
+    </div>
+    <div id="popupRec3" class="popup">
+        <div class="popup__body">
+            <div id="popupRec__content" class="popup__content">
+                <a href="" class="popup__close"></a>
+                <h2 class="rec-header">Консультация по переписке</h2>
                 <div class="input-box">
                     <input type="text" size="40" placeholder="Имя" class="input-name">
                     <input type="text" size="40" placeholder="Фамилия" class="input-surname">

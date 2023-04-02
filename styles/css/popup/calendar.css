@@ -82,6 +82,16 @@
   border-radius: 3px;
 }
 
+.calendar_month {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-visibility: hidden;
+}
+
+.calendar_month::-webkit-scrollbar {
+  display: none;
+}
+
 @media screen and (max-width: 560px) {
   .popup__calendar {
     display: -ms-grid;
