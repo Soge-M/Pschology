@@ -17,3 +17,4 @@ $('.popup__calendar').mousedown(function(e){
     });
     cursordown = false;
 }).mouseleave(end);
+

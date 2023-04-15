@@ -1,10 +1,16 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock-padding");
-
 let unlock = true;
 
 const timeout = 800;
+
+window.onmousedown = function(){
+    setTimeout(() =>{unlock = false},200);
+};
+window.onmouseup = function(){
+    setTimeout(() =>{unlock = true},200);
+};
 
 if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++){
